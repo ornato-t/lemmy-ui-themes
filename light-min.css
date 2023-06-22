@@ -1,0 +1,200 @@
+/* ==UserStyle==
+@name           beehaw.org - 6/14/2023, 12:52:34 AM
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+@-moz-document domain("beehaw.org") {
+    :root {
+        --blue: #007bff;
+        --indigo: #6610f2;
+        --purple: #6f42c1;
+        --pink: #e83e8c;
+        --red: #ff5555;
+        --orange: #f1641e;
+        --yellow: #ffc107;
+        --green: #00c853;
+        --teal: #20c997;
+        --cyan: #02bdc2;
+        --white: #f8f8f2;
+        --gray: #6c757d;
+        --gray-dark: #343a40;
+        --link: #167895;
+        --primary: #ff5555;
+        --secondary: #1494aa;
+        --title: #167895;
+        --success: #6610f2;
+        --info: #007bff;
+        --warning: #ffc107;
+        --danger: #873208;
+        --light: #f8f9fa;
+        --dark: #343a40;
+        --logocolor: #0d3049;
+        --headertext: #f8f8f2;
+        --breakpoint-xs: 0;
+        --breakpoint-sm: 576px;
+        --breakpoint-md: 768px;
+        --breakpoint-lg: 992px;
+        --breakpoint-xl: 1200px;
+        --font-family-sans-serif: 'DM Sans', customMain, -apple-system, BlinkMacSystemFont, "Droid Sans", "Segoe UI", "Helvetica", Arial, sans-serif;
+        --font-family-monospace: customCode, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        --tagblue: #007bff50;
+        --tagindigo: #6610f250;
+        --tagpurple: #6f42c150;
+        --tagpink: #e83e8c50;
+        --tagred: #ff555550;
+        --tagorange: #f1641e50;
+        --tagyellow: #ffc10750;
+        --taggreen: #00c85350;
+        --tagteal: #20c99750;
+        --tagcyan: #02bdc250;
+    }
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,700&family=DM+Serif+Display:ital@0;1&family=DM+Serif+Text:ital@0;1&display=swap') html {
+
+        background: var(--secondary)
+    }
+    body {
+        background: var(--light);
+    }
+    button.text-muted.btn.btn-sm.btn-link.p-0,
+    button.btn.btn-link.text-monospace.text-muted.small.d-inline-block {
+        display: none!important;
+    }
+    .main-content-wrapper .post-listing {
+        display: inline-block;
+        width: 99%;
+        height: 100px;
+        padding-top: 10px;
+        margin: 0;
+    }
+    .post-listing h5 a {
+        font-size: .9rem;
+    }
+
+    .col-md-4 {
+        max-width: 300px;
+        flex: 0 0 300px !important;
+    }
+
+    #app > .mt-4 > .container-lg > .row > .col-md-4 {
+        padding-top: 7px;
+    }
+
+    .thumbnail {
+        border: 1px solid var(--gray);
+    }
+    /* Static sizing for votes */
+    .col-1 {
+        flex: 0 0 60px !important;
+        max-width: 60px!important;
+    }
+
+    /* Static sizing for previews */
+    .col-sm-2 {
+        max-width: 100px;
+        flex: 0 0 100px !important;
+    }
+    main > div.main-content-wrapper > div > div:nth-child(2) {
+        column-count: 2;
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid-column;
+        column-gap: 0px
+    }
+    .col-sm-9 {
+        flex: 0 0 calc(100% - 160px);
+        max-width: calc(100% - 160px);
+    }
+    .shadow-sm {
+        box-shadow: 0 0 0 rgba(34, 34, 34, .0)!important;
+        background: var(--secondary)
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: var(--headertext)!important;
+        font-size: .7em;
+        font-weight: 700;
+    }
+    .navbar-light .navbar-brand {
+        font-weight: 700;
+        color: var(--logocolor);
+        font-family: 'DM Serif Display';
+        text-transform: uppercase;
+    }
+    .custom-select:focus,
+    .btn.focus,
+    .btn:focus {
+        border-color: transparent;
+        outline: 0;
+        box-shadow: 0 0 0 0 var(--cyan);
+    }
+    a[title*='!'] {
+        font-size: 0
+    }
+    a[title*='!']:before,
+    aside a[title*='!']:before,
+    main a[title*='!']:before {
+        content: attr(title);
+        display: inline-block;
+        color: var(--dark);
+        padding: 0px 10px;
+        border-radius: 20px;
+        font-size: .6rem;
+        font-weight: 700;
+        margin-right: 5px;
+        border: 1px solid var(--gray);
+    }
+
+
+    .btn-secondary:hover,
+    .btn-outline-secondary:hover {
+        background-color: var(--secondary);
+        filter: brightness(150%);
+        border: 1px solid var(--secondary);
+    }
+
+    .custom-select:focus,
+    .btn.focus,
+    .btn:focus {
+        border-color: transparent;
+        outline: 0;
+        box-shadow: 0 0 0 0 var(--cyan);
+    }
+    .btn-secondary {
+        color: #fff;
+        background-color: var(--secondary);
+        border-color: var(--secondary);
+    }
+
+    .border-secondary,
+    .btn-outline-secondary {
+        color: var(--secondary);
+        border-color: var(--secondary)!important;
+    }
+    .btn-outline-secondary:not(:disabled):not(.disabled).active,
+    .btn-outline-secondary:not(:disabled):not(.disabled):active,
+    .show > .btn-outline-secondary.dropdown-toggle,
+    .btn-outline-secondary:not(:disabled):not(.disabled).active,
+    .btn-outline-secondary:not(:disabled):not(.disabled):active,
+    .show > .btn-outline-secondary.dropdown-toggle {
+        color: #fff;
+        background-color: var(--secondary);
+        border-color: var(--secondary);
+    }
+    aside .list-inline-item:not(:last-child) a[title*='!']:before {
+        margin-right: -5px;
+    }
+    li.list-inline-item.badge.badge-primary,
+    li.list-inline-item.badge.badge-secondary {
+        padding: 4px 6px;
+        margin: 0 2px 0px 0;
+    }
+
+    .btn-secondary,
+    .mb-3 .mr-2 select,
+    .btn-outline-secondary {
+        margin-top: 5px;
+        font-size: .7rem;
+        font-weight: 700;
+    }
+}
