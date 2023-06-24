@@ -1,0 +1,2 @@
+# Hives
+This file concerns the "hive-light" and "hive-dark" files. They were forked from this [repo](https://github.com/Sintamo/Beehaw-Hive-Theme/tree/main), built by Sintamo and shared with the GPL-3.0 license (included as the [LICENSE](./LICENSE) of this repo). Forked at height: 4494c0f.
